@@ -86,7 +86,7 @@ app_mode = st.sidebar.selectbox("Go to", [
 def show_home():
     st.markdown("<h1 style='text-align: center; color: green;'>🌿 Plant Disease Detection System</h1>", unsafe_allow_html=True)
 
-    st.markdown("""
+    st.markdown(""" 
     Welcome to the **Plant Disease Detection System** — an intelligent tool powered by deep learning that helps you detect diseases in plants just by uploading a photo of a leaf.
     ---  
     """)
@@ -163,7 +163,7 @@ def show_treatment_tips(disease_name):
     }
     st.subheader("💊 Suggested Treatment")
     st.info(tips.get(disease_name, "Treatment info coming soon!")) 
-    
+
 def show_gallery():
     st.title("🖼️ Leaf Gallery")
     st.write("Here are some sample leaves and diseases for reference.")
@@ -172,3 +172,19 @@ def show_gallery():
         "apple_healthy.jpg": "Apple Leaf – Healthy",
         "corn_blight.jpg": "Corn – Northern Leaf Blight",
         "tomato_leaf_mold.jpg": "Tomato – Leaf Mold",
+        # Add more image and caption pairs here
+    }
+
+    # Display images in the gallery folder
+    for img_file, caption in image_captions.items():
+        img_path = os.path.join(gallery_folder, img_file)
+        st.image(img_path, caption=caption, use_column_width=True)
+
+# ---------------- MAIN PAGE DISPLAY ----------------
+if app_mode == "🏠 Home":
+    show_home()
+elif app_mode == "🔍 Disease Recognition":
+    show_disease_recognition()
+elif app_mode == "🖼️ Gallery":
+    show_gallery()
+# Add more pages as needed
