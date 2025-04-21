@@ -31,7 +31,7 @@ from PIL import Image
 
 # display image using streamlit
 
-st.image(img)
+#st.image(img)
 
 #Main Page
 if(app_mode=="HOME"):
