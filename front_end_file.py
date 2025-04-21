@@ -4,7 +4,7 @@ import os
 from PIL import Image
 import datetime
 import requests
-import tensorflow as tf
+#import tensorflow as tf
 
 # ---------------- MODEL PREDICTION FUNCTION ----------------
 def model_predict(image):
