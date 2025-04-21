@@ -3,7 +3,7 @@ import numpy as np
 import os
 # Load and preprocess the image
 def model_predict(image_path):
-   # model = tf.keras.models.load_model(r"C:/Users/Lenovo/Downloads/CNN_plantdiseases_model.keras")
+   # model = tf.keras.models.load_model(r""C:\Users\vishal\Downloads\Plant_Disease_Week_2_CheckPoint (1).ipynb"")
     img = cv2.imread(image_path)  # read the file and convert into array
     H,W,C = 224,224,3
     img = cv2.resize(img, (H, W)) 
@@ -27,7 +27,7 @@ app_mode = st.sidebar.selectbox("Select Page",["HOME","DISEASE RECOGNITION"])
 
 # import Image from pillow to open images
 from PIL import Image
-#img = Image.open(r"C:\Users\Lenovo\Downloads\Diseases.png")
+#img = Image.open(r""C:\Users\vishal\Downloads\download (2).jpg")
 
 # display image using streamlit
 
